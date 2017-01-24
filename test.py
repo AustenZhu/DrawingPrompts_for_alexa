@@ -2,6 +2,7 @@
 import requests, json
 
 def function(received_json): #JSON NOT USED IN APPLICATION LOGIC
+    print(received_json)
     def use_reddit_api(days_past):
         """
         Grabs drawing prompt and alternate theme from r/SketchDaily
@@ -32,4 +33,7 @@ def function(received_json): #JSON NOT USED IN APPLICATION LOGIC
                 altTheme += selftext[index] + " "
             index += 1
         return theme, altTheme
-    
+    return use_reddit_api(0)
+
+if __name__ == '__main__':
+    handler.invoking(function)
