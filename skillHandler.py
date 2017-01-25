@@ -1,37 +1,20 @@
-#For Drawing prompts alexa skill (deployed on python 2.7)
+#Alexa skill editor
 from __future__ import print_function
 import os, sys, subprocess, json
 
+
 LIBS = os.path.join(os.getcwd(), 'local', 'lib')
-#REQUESTS PACKAGE WRAPPING
+#-------PYTHON PACKAGE WRAPPING------------
 def handler(filename):
     def handle(event, context):
         if event['session']['new']:
             on_session_started({'requestId': event['request']['requestId']}, event['session'])
-        session = event['session']
-
-        #Security
-        #if session['application']['applicationId'] != "":
-        #    raise ValueError("Invalid Application ID")
-
-
-
         #Handling Intents Here
-        if event['request']['type'] == "LaunchRequest":
-            return on_launch(event['request'], event['session'])
-        elif event['request']['type'] == "SessionEndedRequest":
+        session = event['session']
+        if event['request']['type'] == "SessionEndedRequest":
             return on_session_ended(event['request'], event['session'])
-        elif event['request']['type'] == "IntentRequest":
-            intent_request = event['request']
-            intent = intent_request['intent']
-            intent_name = intent_request['intent']['name']
-            print("on_intent requestId=" + intent_request['requestId'] +
-                  ", sessionId=" + session['sessionId'])
-            if intent_name == "AMAZON.HelpIntent":
-                return get_help_response()
-            elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
-                return handle_session_end_request()
-            elif intent_name == "DrawingIntent":
+        elif event['request']['type'] == "LaunchRequest" or event['request']['type'] == "IntentRequest":
+            if event['request']['type'] == "LaunchRequest" or event['request']['intent']['name'] == "DrawingIntent":
                 env = os.environ.copy()
                 env.update(LD_LIBRARY_PATH=LIBS)
                 proc = subprocess.Popen(
@@ -44,12 +27,21 @@ def handler(filename):
                 speechOut = ""
                 while not speechOut:
                     try:
-                        print(json.loads(stdout))
                         speechOut = json.loads(stdout)
                     except ValueError:
                         print("Something wrong, trying again")
                         return handle(event, context)
-                return drawing_prompt_response(speechOut, session)
+                return drawing_response(speechOut, session)
+
+            intent_request = event['request']
+            intent = intent_request['intent']
+            intent_name = intent_request['intent']['name']
+            print("on_intent requestId=" + intent_request['requestId'] +
+                  ", sessionId=" + session['sessionId'])
+            if intent_name == "AMAZON.HelpIntent":
+                return get_help_response()
+            elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
+                return handle_session_end_request()
             else:
                 raise ValueError("Invalid intent")
     return handle
@@ -60,7 +52,9 @@ def invoking(f):
 
 lambda_handler = handler('test.py')
 
-#--------------HELPERS------------------------
+
+#--------Helpers----------------
+
 def build_speechlet_response(title, output, reprompt_text, should_end_session):
     return {
         'outputSpeech': {
@@ -87,36 +81,33 @@ def build_response(session_attributes, speechlet_response):
         'sessionAttributes': session_attributes,
         'response': speechlet_response
     }
-def drawing_prompt_response(speechOut, session):
+def drawing_response(speechOut, session):
     session_attributes = {}
     reprompt_text = ""
     should_end_session = True
     return build_response(session_attributes, build_speechlet_response("Drawing Prompt", speechOut, reprompt_text, should_end_session))
-
-#--------------SKill Behaviors--------------------
+#-------------Skill Behaviors----------------
 def get_help_response():
-    session_attributes = {};
-    card_title = "Help"
-    speech_output = "Hello! I can give you many drawing prompts. You can ask for today's, yesterday's, or a random one. Ask me for one now?"
-    reprompt_text = "Ask me for a drawing prompt?"
+    session_attributes = {}
+    card_title = "Welcome"
+    speech_output = "Hello! You can ask me for a writing prompt from today, yesterday, or a random on. Ask for one now?"
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "Ask me for a drawing prompt."
     should_end_session = False
-    return build_response(session_attributes, build_speechlet_response(card_title, speech_output, None, should_end_session))
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 def handle_session_end_request():
-    card_title="Session Ended"
-    speech_output = "Goodbye!"
+    card_title = "Session Ended"
+    speech_output = "Goodbye."
     should_end_session = True
     return build_response({}, build_speechlet_response(card_title, speech_output, None, should_end_session))
 
-#--------Events-------------------
+#---------Events----------------------------
 def on_session_started(session_started_request, session):
     """Called on session start"""
     print("on_session_started requestId=" +session_started_request['requestId'] + ", sessionId=" + session['sessionId'])
-
-def on_launch(launch_request, session):
-    """Called on launch"""
-    print("on_launch requestId=" + launch_request['requestId'] + ", sessionId=" + session['sessionId'])
-    return get_help_response()
 
 def on_session_ended(session_ended_request, session):
     """Called when session ends"""
