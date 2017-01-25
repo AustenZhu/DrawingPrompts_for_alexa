@@ -1,0 +1,17 @@
+{
+  "intents": [
+    {"intent": "DrawingIntent",
+     "slots": [
+       {
+         "name" : "DrawingPrompt",
+         "type" : "LIST_OF_REQUESTS"
+       }
+     ]
+    },
+    {"intent": "AMAZON.HelpIntent"},
+    {"intent": "AMAZON.CancelIntent"},
+    {"intent": "AMAZON.StopIntent"}
+  ]
+}
+
+#LIST_OF_REQUESTS = yesterday | yesterday's | today | today's | random

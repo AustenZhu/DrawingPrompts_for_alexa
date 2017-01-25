@@ -1,0 +1,210 @@
+{
+  "session": {
+    "sessionId": "SessionId.7cd9e182-905a-4345-8095-9320dde1820d",
+    "application": {
+      "applicationId": "amzn1.ask.skill.420209cc-29fe-4e0b-ad26-e1a435f73e3d"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AESWJTULSTNGMXX7POGUAI5LME52HKLDTX4JI5V27X7NOHNRWN45OGOL2JAOICO6WUO7WXFHHMAZQQG33GJYTUW76COEO7LENQX7UFX2G6MKHHBP4WRDHFIIWYJY3Q453UE5SU524356TNKJIC72W4G3SGB7AREN42YMNY5SFA6ZDIWOTCGNJR342NRR5PFF5V4NM2DFVSDRQGY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.f8ab9c96-0c09-43cf-9619-df3be40b9025",
+    "locale": "en-US",
+    "timestamp": "2017-01-17T23:41:43Z",
+    "intent": {
+      "name": "DrawingIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+{
+  "session": {
+    "sessionId": "SessionId.7cd9e182-905a-4345-8095-9320dde1820d",
+    "application": {
+      "applicationId": "amzn1.ask.skill.420209cc-29fe-4e0b-ad26-e1a435f73e3d"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AESWJTULSTNGMXX7POGUAI5LME52HKLDTX4JI5V27X7NOHNRWN45OGOL2JAOICO6WUO7WXFHHMAZQQG33GJYTUW76COEO7LENQX7UFX2G6MKHHBP4WRDHFIIWYJY3Q453UE5SU524356TNKJIC72W4G3SGB7AREN42YMNY5SFA6ZDIWOTCGNJR342NRR5PFF5V4NM2DFVSDRQGY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.f8ab9c96-0c09-43cf-9619-df3be40b9025",
+    "locale": "en-US",
+    "timestamp": "2017-01-17T23:41:43Z",
+    "intent": {
+      "name": "PromptIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+{
+  "session": {
+    "new": True,
+    "sessionId": "amzn1.echo-api.session.[unique-value-here]",
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.[unique-value-here]"
+    },
+    "application": {
+      "applicationId": "amzn1.ask.skill.[unique-value-here]"
+    }
+  },
+  "version": "1.0",
+  "request": {
+    "locale": "en-US",
+    "timestamp": "2016-10-27T18:21:44Z",
+    "type": "LaunchRequest",
+    "requestId": "amzn1.echo-api.request.[unique-valutre-here]"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "device": {
+        "supportedInterfaces": {
+          "AudioPlayer": {}
+        }
+      },
+      "application": {
+        "applicationId": "amzn1.ask.skill.[unique-value-here]"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.[unique-value-here]"
+      }
+    }
+  }
+}
+
+
+
+{
+  "session": {
+    "sessionId": "SessionId.b38ef63b-2360-4a32-aa2c-9b5ada359ed7",
+    "application": {
+      "applicationId": "amzn1.ask.skill.083cf1d2-69e8-4a87-a549-570c9719be67"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFHODYYZWJWFGY76YTP3O7RHUG7NTR7TEA76O4UWRMBQ5YQIABUDZRH4A5HV6JTSCMETLCN5QFL3I7ACSBO5BJ2U7C5IGAWWWWXA5PCKWMDB2UA4SUSSXRWUFSXT5VO3UED5ZQ3LVOKSEY75LI5HLAYAGTVZYJY3OHGX43DCJ6REHMJOBRJ6NK4NDLVMFSOG62AVOC2XABBHDMY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.0b83cd91-f308-4066-b943-d11b3b571c41",
+    "locale": "en-US",
+    "timestamp": "2017-01-25T18:30:43Z",
+    "intent": {
+      "name": "DrawingIntent",
+      "slots": {
+        "promptType": {
+          "name": "promptType",
+          "value": "random"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
+
+{
+  "session": {
+    "sessionId": "SessionId.b38ef63b-2360-4a32-aa2c-9b5ada359ed7",
+    "application": {
+      "applicationId": "amzn1.ask.skill.083cf1d2-69e8-4a87-a549-570c9719be67"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFHODYYZWJWFGY76YTP3O7RHUG7NTR7TEA76O4UWRMBQ5YQIABUDZRH4A5HV6JTSCMETLCN5QFL3I7ACSBO5BJ2U7C5IGAWWWWXA5PCKWMDB2UA4SUSSXRWUFSXT5VO3UED5ZQ3LVOKSEY75LI5HLAYAGTVZYJY3OHGX43DCJ6REHMJOBRJ6NK4NDLVMFSOG62AVOC2XABBHDMY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.0b83cd91-f308-4066-b943-d11b3b571c41",
+    "locale": "en-US",
+    "timestamp": "2017-01-25T18:30:43Z",
+    "intent": {
+      "name": "DrawingIntent",
+      "slots": {
+        "promptType": {
+          "name": "promptType",
+          "value": "yesterday"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
+
+{
+  "session": {
+    "sessionId": "SessionId.b38ef63b-2360-4a32-aa2c-9b5ada359ed7",
+    "application": {
+      "applicationId": "amzn1.ask.skill.083cf1d2-69e8-4a87-a549-570c9719be67"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFHODYYZWJWFGY76YTP3O7RHUG7NTR7TEA76O4UWRMBQ5YQIABUDZRH4A5HV6JTSCMETLCN5QFL3I7ACSBO5BJ2U7C5IGAWWWWXA5PCKWMDB2UA4SUSSXRWUFSXT5VO3UED5ZQ3LVOKSEY75LI5HLAYAGTVZYJY3OHGX43DCJ6REHMJOBRJ6NK4NDLVMFSOG62AVOC2XABBHDMY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.0b83cd91-f308-4066-b943-d11b3b571c41",
+    "locale": "en-US",
+    "timestamp": "2017-01-25T18:30:43Z",
+    "intent": {
+      "name": "DrawingIntent",
+      "slots": {
+        "promptType": {
+          "name": "promptType",
+          "value": "yesterday's"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
+
+{
+  "session": {
+    "sessionId": "SessionId.b38ef63b-2360-4a32-aa2c-9b5ada359ed7",
+    "application": {
+      "applicationId": "amzn1.ask.skill.083cf1d2-69e8-4a87-a549-570c9719be67"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFHODYYZWJWFGY76YTP3O7RHUG7NTR7TEA76O4UWRMBQ5YQIABUDZRH4A5HV6JTSCMETLCN5QFL3I7ACSBO5BJ2U7C5IGAWWWWXA5PCKWMDB2UA4SUSSXRWUFSXT5VO3UED5ZQ3LVOKSEY75LI5HLAYAGTVZYJY3OHGX43DCJ6REHMJOBRJ6NK4NDLVMFSOG62AVOC2XABBHDMY"
+    },
+    "new": True
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.0b83cd91-f308-4066-b943-d11b3b571c41",
+    "locale": "en-US",
+    "timestamp": "2017-01-25T18:30:43Z",
+    "intent": {
+      "name": "DrawingIntent",
+      "slots": {
+        "promptType": {
+          "name": "promptType",
+          "value": "today's"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

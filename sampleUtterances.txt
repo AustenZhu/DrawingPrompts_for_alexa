@@ -1,0 +1,23 @@
+DrawingIntent give me {promptType} drawing prompt
+DrawingIntent give me {promptType} prompt
+DrawingIntent give me a {promptType} drawing prompt
+DrawingIntent tell me a {promptType} drawing prompt
+DrawingIntent tell me a {promptType} prompt
+DrawingIntent tell me {promptType} drawing prompt
+DrawingIntent {promptType} drawing prompt
+DrawingIntent {promptType} prompt
+DrawingIntent for a {promptType} drawing prompt
+DrawingIntent give me {promptType} drawing theme
+DrawingIntent give me a {promptType} drawing theme
+DrawingIntent tell me a {promptType} drawing theme
+DrawingIntent tell me {promptType} drawing theme
+DrawingIntent {promptType} drawing theme
+DrawingIntent for a {promptType} drawing theme
+DrawingIntent for {promptType} drawing prompt
+DrawingIntent for a {promptType} prompt
+DrawingIntent for {promptType} drawing theme
+DrawingIntent a {promptType} drawing prompt
+DrawingIntent a {promptType} prompt
+DrawingIntent a {promptType} drawing theme
+DrawingIntent {promptType} drawing theme
+DrawingIntent {promptType} drawing prompt
